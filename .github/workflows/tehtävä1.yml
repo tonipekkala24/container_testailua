@@ -23,8 +23,8 @@ jobs:
       - name: Commit test results
         if: failure() || success()
         run: |
-          git config user.name 'tonipekkala24'
-          git config user.email 'tpekkala24@students.oamk.fi'
+          git config --global user.name 'tonipekkala24'
+          git config --global user.email 'tpekkala24@students.oamk.fi'
           git add .
           git commit -m 'update' || true
           git push
