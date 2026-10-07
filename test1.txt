@@ -1,0 +1,37 @@
+
+> test
+> playwright test test1
+
+
+Running 1 test using 1 worker
+
+  ✘  1 [chromium] › tests/test1.spec.js:3:1 › Testataan tehtävän 1 tyylit (120ms)
+
+
+  1) [chromium] › tests/test1.spec.js:3:1 › Testataan tehtävän 1 tyylit ────────────────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('h1')
+    Expected: "Welcome"
+    Received: ""
+
+    Call log:
+      - Expect "toHaveText" locator('h1') with timeout 5000ms
+      - waiting for locator('h1')
+      - Protocol error (Runtime.evaluate): Internal server error, session closed.
+
+
+       7 |   let e =  page.locator('h1');
+       8 |
+    >  9 |   expect(e).toHaveText('Welcome');
+         |             ^
+      10 |
+      11 |
+      12 |   });
+        at /__w/container_testailua/container_testailua/tests/test1.spec.js:9:13
+
+    Error Context: test-results/test1-Testataan-tehtävän-1-tyylit-chromium/error-context.md
+
+  1 failed
+    [chromium] › tests/test1.spec.js:3:1 › Testataan tehtävän 1 tyylit ─────────────────────────────
