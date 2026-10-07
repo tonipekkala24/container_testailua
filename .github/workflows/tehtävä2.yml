@@ -1,7 +1,6 @@
 name: teht2
 
-on:
-  push:
+on: workflow_dispatch
 
 jobs:
   haaroitus:
