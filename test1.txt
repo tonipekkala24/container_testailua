@@ -5,7 +5,7 @@
 
 Running 1 test using 1 worker
 
-  ✘  1 [chromium] › tests/test1.spec.js:3:1 › Testataan tehtävän 1 tyylit (120ms)
+  ✘  1 [chromium] › tests/test1.spec.js:3:1 › Testataan tehtävän 1 tyylit (77ms)
 
 
   1) [chromium] › tests/test1.spec.js:3:1 › Testataan tehtävän 1 tyylit ────────────────────────────
