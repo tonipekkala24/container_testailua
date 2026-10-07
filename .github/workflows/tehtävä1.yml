@@ -18,7 +18,7 @@ jobs:
         run: npm test -- test1 > test1.txt || true
         
       - name: Run test2
-        run: npm test -- test2 > test2.txt
+        run: npm test -- test2 > test2.txt || true
 
       - name: Commit test results
         run: |
