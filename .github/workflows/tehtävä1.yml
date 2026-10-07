@@ -22,6 +22,7 @@ jobs:
 
       - name: Commit test results
         run: |
+          git config --global --add safe.directory /__w/container_testailua/container_testailua
           git config --global user.name 'tonipekkala24'
           git config --global user.email 'tpekkala24@students.oamk.fi'
           git add .
