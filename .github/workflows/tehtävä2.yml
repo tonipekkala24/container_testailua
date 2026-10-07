@@ -1,0 +1,17 @@
+name: teht2
+
+on:
+  push:
+
+jobs:
+  haaroitus:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: production
+        if: ${{github.ref_name == 'main'}}
+        run: echo "Push in production"
+        
+      - name: other
+        if: ${{github.ref_name != 'name'}}
+        run: echo "Branch name is ${{github.ref_name}}"
