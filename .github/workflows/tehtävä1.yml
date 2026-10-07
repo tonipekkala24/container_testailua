@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         
       - name: Install dependencies
         run: npm ci
@@ -23,7 +23,7 @@ jobs:
       - name: Commit test results
         if: failure() || success()
         run: |
-          git config --global --add safe.directory '.'
+          git config --global --add safe.directory /__w/container_testailua/container_testailua
           git config --global user.name 'tonipekkala24'
           git config --global user.email 'tpekkala24@students.oamk.fi'
           git add test1.txt test2.txt
