@@ -1,0 +1,23 @@
+name: Koe
+on: workflow_dispatch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: |
+          touch ./tests/uusi.txt
+      - uses: actions/upload-artifact@v7
+        with:
+          name: loggaus
+          path: ./log.txt
+
+  another-job:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v7
+        with:
+          name: loggaus
+      - run: cat log.txt
